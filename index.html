@@ -107,6 +107,7 @@
 					console.log($("#statusUrl").val());
 					app.search($("#statusUrl").val()).then(function (data) {
 						if (data.statuses) {
+							console.log("data >>>>> ", data);
 							console.log(data.statuses[0].id);
 							app.reblogged_by(data.statuses[0].id).then(function (data) {
 								console.log(data);
